@@ -51,16 +51,13 @@ void zapiszDane ( Terminarz & mojTerm ){
 
 void wczytajDane ( const Data & dzis, Terminarz & mojTerm ){
     ifstream odczyt ( "dane.txt" , std::ios::in );
-    if( !odczyt ) cout<<"odczyt jest nullem"<<endl;
     string liniaTresc;
     string liniaData;
     Zdarzenie tymcz;
     while ( !odczyt && !( odczyt.eof() ) ){
         getline ( odczyt, liniaTresc );
         getline ( odczyt, liniaData );
-        cout<<"czyli tu jest blad?"<<endl;
         tymcz = Zdarzenie( liniaTresc, liniaData, dzis );
-        cout<<"nie, tu jest git"<<endl;
         mojTerm.dodajZdarzenie( tymcz );
         liniaTresc.clear();
         liniaData.clear();
