@@ -14,16 +14,11 @@ int main(){
     time_t czas;
     time( & czas );
     struct tm * aktualnyCzas = localtime( & czas );
-    cout<<"siema"<<endl;
     Data teraz( aktualnyCzas );
-    cout<<"siema"<<endl;
     Terminarz mojTerminarz;
-    cout<<"siema"<<endl;
     wczytajDane( teraz, mojTerminarz );
-    cout<<"siema"<<endl;
 
     powitanie();
-    cout<<"siema"<<endl;
 
     int odp;
 
